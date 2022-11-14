@@ -34,8 +34,9 @@ function writeHours() {
         iconEl.classList.add('fas', 'fa-save');
 
         //  Adds ID's
-        textArea.id = 'textArea-' + i;
-        buttonEl.id = 'button-' + i;
+        textArea.id = 'textArea' + i;
+        buttonEl.id = 'btnEvent' + i;
+
 
         //  Constructs section
         divEl.append(divEl2);
@@ -44,30 +45,33 @@ function writeHours() {
         buttonEl.append(iconEl);
         hoursContainer.appendChild(divEl);
 
-        if ((9 + [i]) == thisHour){
+        if ((9 + [i]) == thisHour) {
             textArea.classList.add('present')
-        } else if ((9 + [i]) > thisHour){
+        } else if ((9 + [i]) > thisHour) {
             textArea.classList.add('past')
-        } else if((9 + [i]) < thisHour) {
+        } else if ((9 + [i]) < thisHour) {
             textArea.classList.add('future')
         }
 
     }
 
+};
+writeHours();
+
+
+
+for (let i = 0; i < hoursAvailable.length; i++) {
+    let btns = document.getElementById('btnEvent'+ i)
+    btns.addEventListener('click', function(event){
+        event.preventDefault();
+        let textAreaTime = document.getElementById('textArea' + i)
+        let textOfTime = textAreaTime.value
+        storeTodo(("Todo" + i), textOfTime)
+    }); 
 }
 
-writeHours()
 
-let btns = document.getElementsByClassName("saveBtn");
-function btnListeners() {
+function storeTodo(whichArea, text) {
+    localStorage.setItem(whichArea, JSON.stringify(text))
+};
 
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-			//Add function here
-        });
-    }
-
-    console.log(btns)
-}
-
-btnListeners();
