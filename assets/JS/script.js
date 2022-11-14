@@ -42,6 +42,15 @@ function writeHours() {
         divEl.append(textArea);
         divEl.append(buttonEl);
         buttonEl.append(iconEl);
+        hoursContainer.appendChild(divEl);
+
+        if ((9 + [i]) == thisHour){
+            textArea.classList.add('present')
+        } else if ((9 + [i]) > thisHour){
+            textArea.classList.add('past')
+        } else if((9 + [i]) < thisHour) {
+            textArea.classList.add('future')
+        }
 
     }
 
