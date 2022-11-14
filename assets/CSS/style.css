@@ -21,6 +21,13 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.hdrColors {
+  font-size: 5.5rem;
+  font-weight: 900;
+  background: linear-gradient(to bottom, #00ff0d, rgb(27, 4, 158));
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .description {
   white-space: pre-wrap;
 }
