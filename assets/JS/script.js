@@ -16,7 +16,7 @@ console.log(hoursAvailable);
 
 
 function writeHours() {
-    
+
     for (let i = 0; i < hoursAvailable.length; i++) {
         //  writes Elements
         let divEl = document.createElement('div');
@@ -24,6 +24,14 @@ function writeHours() {
         let textArea = document.createElement('textarea');
         let buttonEl = document.createElement('button');
         let iconEl = document.createElement('i');
+
+        //  Adds classes 
+        divEl.classList.add('time-block', 'row');
+        divEl2.classList.add('hour', 'text-right', 'py-3', 'col-1');
+        divEl2.innerHTML = hoursAvailable[i];
+        textArea.classList.add('description', 'col-9',);
+        buttonEl.classList.add('btn', 'saveBtn', 'col-1', 'text-center');
+        iconEl.classList.add('fas', 'fa-save');
 
     }
 
