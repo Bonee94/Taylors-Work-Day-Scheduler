@@ -57,3 +57,17 @@ function writeHours() {
 }
 
 writeHours()
+
+let btns = document.getElementsByClassName("saveBtn");
+function btnListeners() {
+
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+			//Add function here
+        });
+    }
+
+    console.log(btns)
+}
+
+btnListeners();
