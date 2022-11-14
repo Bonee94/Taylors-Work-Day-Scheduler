@@ -33,6 +33,16 @@ function writeHours() {
         buttonEl.classList.add('btn', 'saveBtn', 'col-1', 'text-center');
         iconEl.classList.add('fas', 'fa-save');
 
+        //  Adds ID's
+        textArea.id = 'textArea-' + i;
+        buttonEl.id = 'button-' + i;
+
+        //  Constructs section
+        divEl.append(divEl2);
+        divEl.append(textArea);
+        divEl.append(buttonEl);
+        buttonEl.append(iconEl);
+
     }
 
 }
