@@ -34,4 +34,4 @@
 
 
 ## ```Deployed URL```
-* 
+* https://bonee94.github.io/Taylors-Work-Day-Scheduler/
